@@ -3,7 +3,8 @@
   <Event :text="text"/>
   <Movies 
     :data="data"
-    
+    @openModal="isModal=true; selectedMovie=$event"  
+    @increaseLike="increaseLike($event)"
   />
   <Modal 
     :data="data" 
